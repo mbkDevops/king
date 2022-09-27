@@ -1,3 +1,9 @@
 hello hi , I am fine.
-praveen
+<<<<<<< HEAD
+
 mamudure
+=======
+krishna
+chaithanya
+
+>>>>>>> aa8bcf395f0761c0b3e36b4215167d565e23ddeb
