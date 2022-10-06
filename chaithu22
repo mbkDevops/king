@@ -1,0 +1,105 @@
+                                                           tomcat-1
+                                                         ============
+
+Application-server
+-------------------:- tomcat
+
+wget link of zip file
+
+./startup.sh
+
+
+
+catalina.2022-10-06.log 
+
+host-manager.2022-10-06.log :- this is one option of tomcat 
+
+localhost_access_log.2022-10-06.txt
+
+catalina.out :- if our tomcat server not working we check this file
+
+
+localhost.2022-10-06.log :-      
+
+
+manager.2022-10-06.log :- this is one option of tomcat
+
+
+
+1) tomcat --> most papulor because its open source.
+   ------ 
+           * its java based application.
+      
+           * its only deply the "war" files
+
+2) tomcat vs jboss(or)wildfly difference
+   --------------------------------------:-
+   jboss:- * its deploy the "war and ear" files.
+
+3) tomcat directory structure
+   --------------------------->
+   
+  bin
+  ----> *startup.sh ---> linux/mac
+         startup.bat --> windows 
+
+      
+ 
+
+  conf:
+        tomcat-users.xml
+        server.xml
+
+
+  lib:
+       jar files 
+
+  logs:
+      catalina.out
+
+  webapps:
+        deploy the applications
+
+
+  work:
+      we deploy the application that application relaeted files is there
+
+  temp:
+      temparary directory.
+
+
+
+instaleation-tomcat
+-------------------->
+
+1) pre-install java 1.8 (or) java 8
+
+2) tomcat 9.x 
+
+3) 403 erorr --> 1.go-->to--> conf file "tomcat-user.xml" here we write--> <user username="krishna" password="password" roles="manager-gui,admin-gui"/>
+
+4) 403 erorr --> 1. go to --> webapps --> manager-gui --> META-INF/context.xml/ 
+
+             here <!--
+
+                   -->  
+
+              like this 
+                         <!--
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+        allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+-->
+
+5) above same we do in host-manager-gui.
+
+
+some-commands
+-------------->
+ps -ef | grep tomcat --> its show the "pid and some details of this application"
+
+chmod u+x *.sh ---> its permissions added users to excute of all .sh files
+
+ln -s /opt/apache-tomcat-9.0.46/bin/startup.sh /user/bin/startTomcat-->this command used for any wear to start the tomcat.
+
+ln -s /opt/apache-tomcat-9.0.46/bin/shutdown.sh /user/bin/stopTomcat-->this command used for any wear to stop the tomcat.
+ 
