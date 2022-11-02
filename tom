@@ -1,0 +1,107 @@
+                                                Today-class
+
+Application-server
+-------------------:-
+1. tomact :- it's java-based tool, and it's op, we deploy the .war packages.
+
+installing tomcat-service
+
+what is .tar ?
+
+#. tar -czvf file.tar.gz dir-name ==> create the tar.gz file.
+#. tar -xzvf tar-name file =========> it's un-tar the file.
+
+1. yum update -y
+
+2. yum java -y  <java --version>
+
+3. yum install git (or) yum install maven 
+
+4. yum istall wget -y
+
+5. wget link
+
+
+
+
+tomcat directory structure
+---------------------------:-
+
+bin
+----:- it conatin commands :- startup.sh  
+
+conf
+----:- tomcat-user.xml
+
+lib
+---:-  .jar files
+
+
+logs
+----:- 
+
+webapps :
+---------:- we deploy the .war file, in this path. 
+
+work
+----:- we deploy the application that application related file created in this path or dir.
+tomcat running-mode
+---------------------:-
+ sh startup.sh
+
+ ./startup.sh
+
+
+43.205.115.254:8080
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
