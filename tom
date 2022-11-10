@@ -1,89 +1,112 @@
-                                                Today-class
+                                            Tomcat
+                                         -----------
 
-Application-server
--------------------:-
-1. tomact :- it's java-based tool, and it's op, we deploy the .war packages.
+1. git --> scm
 
-installing tomcat-service
+2. maven --> build 
 
-what is .tar ?
-
-#. tar -czvf file.tar.gz dir-name ==> create the tar.gz file.
-#. tar -xzvf tar-name file =========> it's un-tar the file.
-
-1. yum update -y
-
-2. yum java -y  <java --version>
-
-3. yum install git (or) yum install maven 
-
-4. yum istall wget -y
-
-5. wget link
+3. tomcat --> web logic or Application tool
 
 
+Tomcat
+------:--> it's open source tool
+ 
+          * java based tool
 
+          * it's only deploy the  "war" packages
 
-tomcat directory structure
----------------------------:-
+tomcat dir-structure
+-------:------------>
 
 bin
-----:- it conatin commands :- startup.sh  
+----> it contain commands (startup.sh)
 
 conf
-----:- tomcat-user.xml
+----> configuration files (tomcat-user.xml)
 
 lib
----:-  .jar files
+--->  jar files
 
-
-logs
-----:- 
-
-webapps :
----------:- we deploy the .war file, in this path. 
+webapps
+--------:- we deploy the .war packages in this path
 
 work
-----:- we deploy the application that application related file created in this path or dir.
-tomcat running-mode
----------------------:-
- sh startup.sh
+-----:- we deploy the application that application related file created in this path
 
- ./startup.sh
+logs
+-----:- 
 
+installation part
+-------------------:-
 
-43.205.115.254:8080
+wget <tomcat tar.gz file link>
 
+un-tar file :--> tar -xvzf <tar file-name>
 
+create tar file :--> tar -czvf file.tar.gz dir-name 
 
+tomcat default port 8080
 
+start and stop tomcat server
+-----------------------------:-
+1. sh startup.sh
 
+2. ./startup.sh
 
+errors
+-------:-
 
+error of 403 :--> Access Denied 
 
+error of 404 :--> page not found
 
+create the user's in tomcat
+----------------------------:-
+path--> tomcat/conf/tomcat-user.xml
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<user username="tomcat" password="<must-be-changed>" roles="tomcat"/>
+<user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
+<user username="role1" password="<must-be-changed>" roles="role1"/>
 
 
+<user username="admin" password="admin" roles="manager-gui,admin-gui"/>
+
+change configaration in context.xml
+------------------------------------:-
+
+path--> tomcat/webapps/manager/META-INF/context.xml
+
+<!--
+
+value
+
+-->
+how many ways deploy war file into tomcat-server
+-------------------------------------------------:-
+2ways
+
+1. way --> deploying to war file in webbapps dir.
+
+2. way --> useing of manager-gui deploy the war file.
+
+acess od our application
+-------------------------:-
+
+http://13.126.44.7:8080/mbk
+
+
+soft-link
+----------:-
+
+start-tomcat : ln -s /tomcat/apache-tomcat-9.0.68/bin/startup.sh /usr/bin/start
+
+stop-tomcat : ln -s /tomcat/apache-tomcat-9.0.68/bin/shutdown.sh /usr/bin/stop
+
+
+change the port number 
+----------------------:-
+
+pwd --> /conf/server.xml --> 69 line edit the port number.
 
 
 
@@ -104,4 +127,35 @@ tomcat running-mode
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
